@@ -40,7 +40,7 @@ with st.sidebar:
 
 # ---------- TITLE ----------
 with st.expander("For folks having situation about small talk:"):
-    st.subhearder("Try to step out of your comfort zone and talk to people but make sure you know what they want to talk about")
+    st.subhearder("Try to step out")
     Tatum_path = IMG_DIR / "Tatum.jpg"
     if Tatum_path.exists():
         st.image(
@@ -248,6 +248,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
