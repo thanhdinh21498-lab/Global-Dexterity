@@ -43,7 +43,7 @@ with st.sidebar:
 
 # ---------- TITLE ----------
 st.header("For folks having situation with small talk")
-with st.expander("Some examples to encourage you guys!                ------                press here to see more"):
+with st.expander("Some examples to encourage you guys!                - - - - - -                click here to see more"):
     st.write("Try to step out and talk to high profile people but make sure you know what to talk about")
     Tatum_path = IMG_DIR / "Tatum.jpg"
     if Tatum_path.exists():
@@ -184,7 +184,7 @@ Here are short summaries from my diary.
 """
 )
 
-with st.expander("Attempt 1 – Very nervous, softened my message                ------                press here to see more"):
+with st.expander("Attempt 1 – Very nervous, softened my message                - - - - - -                click here to see more"):
     st.write(
         """
 - I disagreed with a teammate but used very soft language and spoke quietly.  
@@ -194,7 +194,7 @@ with st.expander("Attempt 1 – Very nervous, softened my message               
         """
     )
 
-with st.expander("Attempt 2 – Used a simple feedback phrase                ------                press here to see more"):
+with st.expander("Attempt 2 – Used a simple feedback phrase                - - - - - -                click here to see more"):
     st.write(
         """
 - I used a phrase like: *“I see your point, but maybe we can try…”*  
@@ -204,7 +204,7 @@ with st.expander("Attempt 2 – Used a simple feedback phrase                ---
         """
     )
 
-with st.expander("Attempt 3 – More confident and better timing                ------                press here to see more"):
+with st.expander("Attempt 3 – More confident and better timing                - - - - - -                click here to see more"):
     st.write(
         """
 - I chose a good moment after the meeting to share my feedback one-on-one.  
@@ -300,6 +300,7 @@ if submitted:
 
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
