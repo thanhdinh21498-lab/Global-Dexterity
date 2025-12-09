@@ -40,7 +40,7 @@ with st.sidebar:
 
 # ---------- TITLE ----------
 st.header("For folks having situation with small talk")
-with st.expander("Some example to encourage you guys!                ------                press here to see more"):
+with st.expander("Some examples to encourage you guys!                ------                press here to see more"):
     st.write("Try to step out and talk to high profile people but make sure you know what to talk about")
     Tatum_path = IMG_DIR / "Tatum.jpg"
     if Tatum_path.exists():
@@ -266,6 +266,7 @@ st.components.v1.iframe(
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
