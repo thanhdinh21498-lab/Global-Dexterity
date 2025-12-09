@@ -264,7 +264,7 @@ in a clearer way while keeping respect and relationships in mind.
 # ---------- SECTION 7: FEEDBACK FORM ----------
 st.header("7. Share Your Feedback")
 
-st.write("I would love to hear any comments or suggestions about this project.")
+st.write("I would love to hear any comments or suggestions about this project. Don't force yourself to hard, take it easy on me ^^")
 
 with st.form("feedback_form"):
     name = st.text_input("Name (optional)")
@@ -274,6 +274,7 @@ with st.form("feedback_form"):
         index=1,
     )
     rating = st.slider("How clear was this project?", 1, 5, 4)
+    rating = st.slider("How good was this project?", 1, 5, 4)
     comments = st.text_area("Any feedback or suggestions?")
 
     submitted = st.form_submit_button("Submit feedback")
@@ -299,6 +300,7 @@ if submitted:
 
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
