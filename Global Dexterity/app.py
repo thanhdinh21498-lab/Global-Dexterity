@@ -39,7 +39,8 @@ with st.sidebar:
 
 
 # ---------- TITLE ----------
-with st.expander("For folks having situation about small talk:"):
+st.header("For folks having situation with small talk")
+with st.expander("Don't be jealous ^^"):
     st.write("Try to step out and talk to high profile people but make sure you know what to talk about")
     Tatum_path = IMG_DIR / "Tatum.jpg"
     if Tatum_path.exists():
@@ -248,6 +249,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
