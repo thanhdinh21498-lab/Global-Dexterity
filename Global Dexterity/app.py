@@ -262,7 +262,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 # ---------- SECTION 7: FEEDBACK FORM ----------
-st.header("7. Share Your Feedback")
+st.header("7. Now Is Your Turn To Give Feedback!!!!!!")
 
 st.write("I would love to hear any comments or suggestions about this project. Don't force yourself to hard, take it easy on me ^^")
 
@@ -300,6 +300,7 @@ if submitted:
 
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
