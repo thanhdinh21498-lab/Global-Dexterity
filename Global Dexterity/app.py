@@ -222,8 +222,8 @@ st.header("6. What I Learned About Global Dexterity")
 st.write(
     """
 Working on this situation showed me how strongly culture shapes our comfort with disagreement
-and feedback. Through reading *Global Dexterity* (Chapters 1–5), talking with my mentor
-Coach Le Ba Nam Linh, collecting survey data, and practicing in real life, I learned that:
+and feedback. Through reading *Global Dexterity* (Most of it), talking with my mentor
+Coach Le Ba Nam Linh and my Brandeis cohort, collecting survey data, and practicing in real life, I learned that:
 
 - It is possible to be more direct **and** still be myself.  
 - Customizing my language (for example, using gentle openers) helps bridge Vietnamese and U.S. expectations.  
@@ -235,4 +235,5 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
