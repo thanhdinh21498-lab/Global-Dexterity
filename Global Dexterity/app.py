@@ -137,9 +137,9 @@ st.write(
     """
 From the survey, I noticed some patterns:
 
-- **Comfort with disagreement** and **directness** tend to be higher for people who grew up in the U.S. and Brazil.  
+- **Comfort with disagreement** and **directness** tend to be higher for American and Brazilian.  
 - **Saving face** is more important on average for people from Vietnam and India.  
-- Acceptability of disagreeing with someone older or higher status also varies by culture.
+- Acceptability of disagreeing with someone older or higher status also varies by culture but can easily see that Asian feel more uncomfortable on this.
 
 These patterns match my own experience: my Vietnamese background makes me more cautious,
 especially about embarrassing others or challenging someone with higher status.
@@ -235,6 +235,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
