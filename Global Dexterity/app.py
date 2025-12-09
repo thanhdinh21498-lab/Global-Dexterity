@@ -64,6 +64,22 @@ not rudeness. This cultural gap is what I worked on in this project.
 
 # ---------- SECTION 2: LOAD AND SHOW SURVEY DATA ----------
 st.header("2. Cultural Expectations Survey")
+# ----- PIE CHART IMAGE (optional visual summary) -----
+pie_chart_path = BASE_DIR / "chart" / "Backgroup.jpg"
+
+if pie_chart_path.exists():
+    st.subheader("Where did survey participants grow up?")
+    st.image(pie_chart_path, use_container_width=True)
+    st.write(
+        """
+        This chart shows the distribution of survey participants by where they grew up.
+        Having respondents from Vietnam, the U.S., India, Brazil, and Albania adds 
+        cultural diversity to the feedback patterns we observe later.
+        """
+    )
+else:
+    st.info("Add chart/backgroup.jpg to show the pie chart here.")
+
 
 if CSV_PATH.exists():
     df = pd.read_csv(CSV_PATH)
@@ -219,3 +235,4 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
