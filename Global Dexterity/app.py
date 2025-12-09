@@ -39,6 +39,19 @@ with st.sidebar:
 
 
 # ---------- TITLE ----------
+with st.expander("For folks having situation about small talk:"):
+    st.subhearder("Try to step out of your comfort zone and talk to people but make sure you know what they want to talk about")
+    Tatum_path = IMG_DIR / "Tatum.jpg"
+    if Tatum_path.exists():
+        st.image(
+            Tatum_path,
+            caption="Try your best to talk to high profile individual",
+            use_container_width=True,
+        )
+    else:
+        st.info("Add images/Tatum.jpg to show Tatum photo here.")
+    
+
 st.title("Disagreeing or Giving Critical Feedback Across Cultures")
 
 st.markdown(
@@ -235,6 +248,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
