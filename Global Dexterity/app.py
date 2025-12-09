@@ -42,7 +42,7 @@ with st.sidebar:
 
 
 # ---------- TITLE ----------
-st.header("For folks having situation with small talk")
+st.header("For folks having situation with small talk/networking")
 with st.expander("Some examples to encourage you guys!                - - - - - -                click here to see more"):
     st.write("Try to step out and talk to high profile people but make sure you know what to talk about")
     Tatum_path = IMG_DIR / "Tatum.jpg"
@@ -300,6 +300,7 @@ if submitted:
 
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
