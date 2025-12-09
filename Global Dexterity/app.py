@@ -46,11 +46,21 @@ with st.expander("Don't be jealous ^^"):
     if Tatum_path.exists():
         st.image(
             Tatum_path,
-            caption="Try your best to talk to high profile individual",
+            caption="Jayson Tatum with a big smile",
             use_container_width=True,
         )
     else:
         st.info("Add images/Tatum.jpg to show Tatum photo here.")
+    
+    Rob_path = IMG_DIR / "Rob.jpg"
+    if Rob_path.exists():
+        st.image(
+            Rob_path,
+            caption="Robert Hale Jr - Co-owner of the Boston Celtics",
+            use_container_width=True,
+        )
+    else:
+        st.info("Add images/Rob.jpg to show Tatum photo here.")
     
 
 st.title("Disagreeing or Giving Critical Feedback Across Cultures")
@@ -249,6 +259,7 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
