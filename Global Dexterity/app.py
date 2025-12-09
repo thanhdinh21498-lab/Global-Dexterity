@@ -267,15 +267,15 @@ st.header("7. Now Is Your Turn To Give Feedback!!!!!!")
 st.write("I would love to hear any comments or suggestions about this project. Don't force yourself to hard, take it easy on me ^^")
 
 with st.form("feedback_form"):
-    name = st.text_input("Name (optional)")
+    name = st.text_input("Your Name (optional)")
     role = st.selectbox(
-        "Who are you?",
+        "You are my:",
         ["Professor", "Classmate", "Friend", "Other"],
         index=1,
     )
     rating = st.slider("How clear was this project?", 1, 5, 4)
     rating = st.slider("How good was this project?", 1, 5, 4)
-    comments = st.text_area("Any feedback or suggestions?")
+    comments = st.text_area("Anything you want to share after your journey on my very first website?")
 
     submitted = st.form_submit_button("Submit feedback")
 
@@ -299,7 +299,8 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 
-st.success("Thank you for viewing my Global Dexterity project!")
+st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
