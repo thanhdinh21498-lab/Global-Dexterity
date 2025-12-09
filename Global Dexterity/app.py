@@ -2,6 +2,9 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import csv
+from datetime import datetime
+
 
 # ---------- PATHS ----------
 BASE_DIR = Path(__file__).resolve().parent
@@ -258,14 +261,45 @@ in a clearer way while keeping respect and relationships in mind.
 """
 )
 
-st.markdown("### 💬 Feedback Form")
+# ---------- SECTION 7: FEEDBACK FORM ----------
+st.header("7. Share Your Feedback")
 
-st.components.v1.iframe(
-    "https://docs.google.com/forms/d/e/1FAIpQLSeMoJT-tIv5P7vDOBycZsxCQe5XtkoSLY4QVRhmDgiL4omP_Q/viewform?usp=header",
-    height=800,
-)
+st.write("I would love to hear any comments or suggestions about this project.")
+
+with st.form("feedback_form"):
+    name = st.text_input("Name (optional)")
+    role = st.selectbox(
+        "Who are you?",
+        ["Professor", "Classmate", "Friend", "Other"],
+        index=1,
+    )
+    rating = st.slider("How clear was this project?", 1, 5, 4)
+    comments = st.text_area("Any feedback or suggestions?")
+
+    submitted = st.form_submit_button("Submit feedback")
+
+if submitted:
+    feedback_file = BASE_DIR / "feedback.csv"
+    new_row = [
+        datetime.now().isoformat(timespec="seconds"),
+        name,
+        role,
+        rating,
+        comments,
+    ]
+    file_exists = feedback_file.exists()
+
+    with feedback_file.open("a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["timestamp", "name", "role", "rating", "comments"])
+        writer.writerow(new_row)
+
+    st.success("Thank you for your feedback! 🙏")
+
 
 st.success("Thank you for viewing my Global Dexterity project!")
+
 
 
 
