@@ -1,23 +1,19 @@
 from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 import csv
 from datetime import datetime
 
-
 # ---------- PATHS ----------
 BASE_DIR = Path(__file__).resolve().parent
-CSV_PATH = BASE_DIR / "survey_data.csv"      # rename your file to this
+CSV_PATH = BASE_DIR / "survey_data.csv"      # your survey file
 IMG_DIR = BASE_DIR / "images"
-
 
 # ---------- PAGE CONFIG ----------
 st.set_page_config(
     page_title="Global Dexterity – A Way of Disagreeing and Giving Feedback Across Cultures",
     layout="wide",
 )
-
 
 # ---------- SIDEBAR ----------
 with st.sidebar:
@@ -40,11 +36,23 @@ with st.sidebar:
     else:
         st.info("Add images/mentor_linh.jpg to show a mentor photo here.")
 
+    st.markdown("---")
+    st.subheader("Jump to section")
+    st.markdown("[0️⃣ Small talk examples](#small-talk)")
+    st.markdown("[1️⃣ My Situation](#my-situation)")
+    st.markdown("[2️⃣ Cultural Survey](#cultural-survey)")
+    st.markdown("[3️⃣ What the Data Suggests](#data-suggests)")
+    st.markdown("[4️⃣ Practice Attempts](#practice-attempts)")
+    st.markdown("[5️⃣ Before vs After](#before-after)")
+    st.markdown("[6️⃣ Final Reflection](#final-reflection)")
+    st.markdown("[7️⃣ Your Feedback](#feedback-section)")
 
-# ---------- TITLE ----------
+# ---------- TITLE / SMALL-TALK SECTION ----------
+st.markdown("<a id='small-talk'></a>", unsafe_allow_html=True)
 st.header("For folks having situation with small talk/networking")
+
 with st.expander("Some examples to encourage you guys!                - - - - - -                click here to see more"):
-    st.write("Try to step out and talk to high profile people but make sure you know what to talk about")
+    st.write("Try to step out and talk to high profile people but make sure you know what to talk about.")
     Tatum_path = IMG_DIR / "Tatum.jpg"
     if Tatum_path.exists():
         st.image(
@@ -54,7 +62,7 @@ with st.expander("Some examples to encourage you guys!                - - - - - 
         )
     else:
         st.info("Add images/Tatum.jpg to show Tatum photo here.")
-    
+
     Rob_path = IMG_DIR / "Rob.jpg"
     if Rob_path.exists():
         st.image(
@@ -63,11 +71,9 @@ with st.expander("Some examples to encourage you guys!                - - - - - 
             use_container_width=True,
         )
     else:
-        st.info("Add images/Rob.jpg to show Tatum photo here.")
-    
+        st.info("Add images/Rob.jpg to show Rob photo here.")
 
 st.title("Disagreeing or Giving Critical Feedback Across Cultures")
-
 st.markdown(
     """
 This Streamlit site is my final interactive project for **BUS 222F – Global Dexterity**.  
@@ -75,8 +81,8 @@ I worked on a situation where I often feel uncomfortable: **disagreeing or givin
 """
 )
 
-
 # ---------- SECTION 1: MY SITUATION ----------
+st.markdown("<a id='my-situation'></a>", unsafe_allow_html=True)
 st.header("1. My Situation")
 
 st.write(
@@ -88,9 +94,10 @@ not rudeness. This cultural gap is what I worked on in this project.
 """
 )
 
-
 # ---------- SECTION 2: LOAD AND SHOW SURVEY DATA ----------
+st.markdown("<a id='cultural-survey'></a>", unsafe_allow_html=True)
 st.header("2. Cultural Expectations Survey")
+
 # ----- PIE CHART IMAGE (optional visual summary) -----
 pie_chart_path = BASE_DIR / "chart" / "Backgroup.jpg"
 
@@ -99,14 +106,13 @@ if pie_chart_path.exists():
     st.image(pie_chart_path, use_container_width=True)
     st.write(
         """
-        This chart shows the distribution of survey participants by where they grew up.
-        Having respondents from Vietnam, the U.S., India, Brazil, and Albania adds 
-        cultural diversity to the feedback patterns we observe later.
-        """
+This chart shows the distribution of survey participants by where they grew up.
+Having respondents from Vietnam, the U.S., India, Brazil, and Albania adds 
+cultural diversity to the feedback patterns we observe later.
+"""
     )
 else:
-    st.info("Add chart/backgroup.jpg to show the pie chart here.")
-
+    st.info("Add chart/Backgroup.jpg to show the pie chart here.")
 
 if CSV_PATH.exists():
     df = pd.read_csv(CSV_PATH)
@@ -147,7 +153,6 @@ Each line represents one question, and the x-axis shows where respondents grew u
         """
     )
 
-    # Set country as index so Streamlit uses it on x-axis
     st.line_chart(summary.set_index(COL_COUNTRY))
 
 else:
@@ -156,25 +161,25 @@ else:
         "Place your exported Google Form file in the same folder as app.py and rename it to 'survey_data.csv'."
     )
 
-
 # ---------- SECTION 3: INTERPRETING THE DATA ----------
+st.markdown("<a id='data-suggests'></a>", unsafe_allow_html=True)
 st.header("3. What the Data Suggests")
 
 st.write(
     """
 From the survey, I noticed some patterns:
 
-- **Comfort with disagreement** and **directness** tend to be higher for American and Brazilian.  
+- **Comfort with disagreement** and **directness** tend to be higher for American and Brazilian respondents.  
 - **Saving face** is more important on average for people from Vietnam and India.  
-- Acceptability of disagreeing with someone older or higher status also varies by culture but can easily see that Asian feel more uncomfortable on this.
+- Acceptability of disagreeing with someone older or higher status also varies by culture, and it is clear that many Asian respondents feel less comfortable with this.
 
 These patterns match my own experience: my Vietnamese background makes me more cautious,
 especially about embarrassing others or challenging someone with higher status.
 """
 )
 
-
 # ---------- SECTION 4: MY PRACTICE ATTEMPTS ----------
+st.markdown("<a id='practice-attempts'></a>", unsafe_allow_html=True)
 st.header("4. My Practice Attempts (Diary Highlights)")
 
 st.write(
@@ -214,8 +219,8 @@ with st.expander("Attempt 3 – More confident and better timing                
         """
     )
 
-
 # ---------- SECTION 5: BEFORE VS AFTER ----------
+st.markdown("<a id='before-after'></a>", unsafe_allow_html=True)
 st.header("5. Before vs. After")
 
 col1, col2 = st.columns(2)
@@ -242,8 +247,8 @@ with col2:
         """
     )
 
-
 # ---------- SECTION 6: FINAL REFLECTION ----------
+st.markdown("<a id='final-reflection'></a>", unsafe_allow_html=True)
 st.header("6. What I Learned About Global Dexterity")
 
 st.write(
@@ -262,9 +267,13 @@ in a clearer way while keeping respect and relationships in mind.
 )
 
 # ---------- SECTION 7: FEEDBACK FORM ----------
+st.markdown("<a id='feedback-section'></a>", unsafe_allow_html=True)
 st.header("7. Now Is Your Turn To Give Feedback!!!!!!")
 
-st.write("I would love to hear any comments or suggestions about this project. Don't force yourself to hard, take it easy on me ^^")
+st.write(
+    "I would love to hear any comments or suggestions about this project. "
+    "Don't force yourself too hard, take it easy on me ^^"
+)
 
 with st.form("feedback_form"):
     name = st.text_input("Your Name (optional)")
@@ -273,9 +282,11 @@ with st.form("feedback_form"):
         ["Professor", "Classmate", "Friend", "Other"],
         index=1,
     )
-    rating = st.slider("How clear was this project?", 1, 5, 4)
-    rating = st.slider("How good was this project?", 1, 5, 4)
-    comments = st.text_area("Anything you want to share after your journey on my very first website?")
+    rating_clarity = st.slider("How clear was this project?", 1, 5, 4)
+    rating_quality = st.slider("How good was this project overall?", 1, 5, 4)
+    comments = st.text_area(
+        "Anything you want to share after your journey on my very first website?"
+    )
 
     submitted = st.form_submit_button("Submit feedback")
 
@@ -285,7 +296,8 @@ if submitted:
         datetime.now().isoformat(timespec="seconds"),
         name,
         role,
-        rating,
+        rating_clarity,
+        rating_quality,
         comments,
     ]
     file_exists = feedback_file.exists()
@@ -293,29 +305,11 @@ if submitted:
     with feedback_file.open("a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not file_exists:
-            writer.writerow(["timestamp", "name", "role", "rating", "comments"])
+            writer.writerow(
+                ["timestamp", "name", "role", "rating_clarity", "rating_quality", "comments"]
+            )
         writer.writerow(new_row)
 
     st.success("Thank you for your feedback! 🙏")
 
-
 st.success("And thank you so much for viewing my Global Dexterity project!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
