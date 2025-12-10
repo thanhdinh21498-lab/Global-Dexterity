@@ -35,23 +35,43 @@ with st.sidebar:
         )
     else:
         st.info("Add images/mentor_linh.jpg to show a mentor photo here.")
-
-        st.markdown("---")
+    st.markdown("---")
     st.subheader("Jump to section")
+
+    # ---- CSS to remove underline + blue color ----
+    st.markdown(
+        """
+        <style>
+        .sidebar-link {
+            color: white !important;        /* change text color */
+            text-decoration: none !important; /* remove underline */
+            font-size: 16px;
+            display: block;
+            padding: 4px 0px;
+        }
+        .sidebar-link:hover {
+            color: #f5c542 !important;      /* gold hover color */
+            text-decoration: none !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     st.markdown(
         """
-- [Small talk / networking](#small-talk)
-- [My Situation](#my-situation)
-- [Cultural Survey](#cultural-survey)
-- [What the Data Suggests](#data-suggests)
-- [Practice Attempts](#practice-attempts)
-- [Before vs After](#before-after)
-- [Final Reflection](#final-reflection)
-- [Your Feedback](#feedback-section)
+        <a class="sidebar-link" href="#small-talk">Small talk / networking</a>
+        <a class="sidebar-link" href="#my-situation">My Situation</a>
+        <a class="sidebar-link" href="#cultural-survey">Cultural Survey</a>
+        <a class="sidebar-link" href="#data-suggests">What the Data Suggests</a>
+        <a class="sidebar-link" href="#practice-attempts">Practice Attempts</a>
+        <a class="sidebar-link" href="#before-after">Before vs After</a>
+        <a class="sidebar-link" href="#final-reflection">Final Reflection</a>
+        <a class="sidebar-link" href="#feedback-section">Your Feedback</a>
         """,
-        unsafe_allow_html=True,
+        unsafe_allow_html=True
     )
+
 
 # ---------- TITLE / SMALL-TALK SECTION ----------
 st.markdown("<a id='small-talk'></a>", unsafe_allow_html=True)
@@ -319,4 +339,5 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
