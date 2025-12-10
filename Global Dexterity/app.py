@@ -30,7 +30,7 @@ with st.sidebar:
     if mentor_path.exists():
         st.image(
             mentor_path,
-            caption="Here is Mr. Le Ba Nam Linh, my basketball coach since 2019 and also a very succesful business man (HNBA & Zeit Media)",
+            caption="Here is Mr. Le Ba Nam Linh, my basketball coach since 2019 and also a very successful business man (HNBA & Zeit Media)",
             use_container_width=True,
         )
     else:
@@ -339,6 +339,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
