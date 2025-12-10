@@ -36,16 +36,22 @@ with st.sidebar:
     else:
         st.info("Add images/mentor_linh.jpg to show a mentor photo here.")
 
-    st.markdown("---")
+        st.markdown("---")
     st.subheader("Jump to section")
-    st.markdown("[0️⃣ Small talk examples](#small-talk)")
-    st.markdown("[1️⃣ My Situation](#my-situation)")
-    st.markdown("[2️⃣ Cultural Survey](#cultural-survey)")
-    st.markdown("[3️⃣ What the Data Suggests](#data-suggests)")
-    st.markdown("[4️⃣ Practice Attempts](#practice-attempts)")
-    st.markdown("[5️⃣ Before vs After](#before-after)")
-    st.markdown("[6️⃣ Final Reflection](#final-reflection)")
-    st.markdown("[7️⃣ Your Feedback](#feedback-section)")
+
+    st.markdown(
+        """
+- [Small talk / networking](#small-talk)
+- [My Situation](#my-situation)
+- [Cultural Survey](#cultural-survey)
+- [What the Data Suggests](#data-suggests)
+- [Practice Attempts](#practice-attempts)
+- [Before vs After](#before-after)
+- [Final Reflection](#final-reflection)
+- [Your Feedback](#feedback-section)
+        """,
+        unsafe_allow_html=True,
+    )
 
 # ---------- TITLE / SMALL-TALK SECTION ----------
 st.markdown("<a id='small-talk'></a>", unsafe_allow_html=True)
@@ -313,3 +319,4 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
