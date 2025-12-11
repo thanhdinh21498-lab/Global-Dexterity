@@ -35,27 +35,23 @@ with st.sidebar:
         )
     else:
         st.info("Add images/mentor_linh.jpg to show a mentor photo here.")
-    st.markdown("---")
-    st.subheader("Jump to section")
+       st.markdown("---")
+    st.subheader("Sections")
 
-    # ---- CSS to remove underline + blue color ----
+    # ---- CSS: make all sidebar links look like plain text ----
     st.markdown(
         """
         <style>
         .sidebar-link {
-            color: white !important;        /* change text color */
+            color: inherit !important;        /* use normal sidebar text color */
             text-decoration: none !important; /* remove underline */
             font-size: 16px;
             display: block;
-            padding: 4px 0px;
-        }
-        .sidebar-link:hover {
-            color: #f5c542 !important;      /* gold hover color */
-            text-decoration: none !important;
+            margin: 4px 0px;
         }
         </style>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     st.markdown(
@@ -69,7 +65,7 @@ with st.sidebar:
         <a class="sidebar-link" href="#final-reflection">Final Reflection</a>
         <a class="sidebar-link" href="#feedback-section">Your Feedback</a>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
 
@@ -339,6 +335,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
