@@ -35,7 +35,7 @@ with st.sidebar:
         )
     else:
         st.info("Add images/mentor_linh.jpg to show a mentor photo here.")
-       st.markdown("---")
+        st.markdown("---")
     st.subheader("Sections")
 
     # ---- CSS: make all sidebar links look like plain text ----
@@ -335,6 +335,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
