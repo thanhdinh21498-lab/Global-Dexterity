@@ -77,7 +77,7 @@ st.header("And I want to go around to take a look at other's projects, not just 
 st.header("Enjoy \U0001F600")
 
 st.markdown("<a id='small-talk'></a>", unsafe_allow_html=True)
-st.header("For folks having situation with small talk/networking")
+st.header("For folks having a situation with small talk/networking")
 
 with st.expander("Some examples to encourage you guys!                - - - - - -                click here to see more"):
     st.write("Try to step out and talk to high profile people but make sure you know what to talk about.")
@@ -362,6 +362,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
