@@ -184,7 +184,7 @@ Each line represents one question, and the x-axis shows where respondents grew u
         alt.Chart(chart_data)
         .mark_line(point=True)
         .encode(
-            x=alt.X(f"{COL_COUNTRY}:N", sort=None, axis=alt.Axis(labelAngle=90)),  # rotate labels
+            x=alt.X(f"{COL_COUNTRY}:N", sort=None, axis=alt.Axis(labelAngle=45)),  # rotate labels
             y=alt.Y("Score:Q", scale=alt.Scale(domain=[0, 5])),
             color="Question:N",
             tooltip=[COL_COUNTRY, "Question", "Score"]
@@ -357,6 +357,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
