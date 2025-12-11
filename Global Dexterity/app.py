@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 import csv
+import altair as alt
 from datetime import datetime
 
 # ---------- PATHS ----------
@@ -175,7 +176,28 @@ Each line represents one question, and the x-axis shows where respondents grew u
         """
     )
 
-    st.line_chart(summary.set_index(COL_COUNTRY))
+    # ---- Altair chart with vertical x-axis labels ----
+
+chart_data = summary.melt(id_vars=COL_COUNTRY, var_name="Question", value_name="Score")
+
+chart = (
+    alt.Chart(chart_data)
+    .mark_line(point=True)
+    .encode(
+        x=alt.X(f"{COL_COUNTRY}:N", sort=None, axis=alt.Axis(labelAngle=90)),  # rotate labels
+        y=alt.Y("Score:Q", scale=alt.Scale(domain=[0, 5])),
+        color="Question:N",
+        tooltip=[COL_COUNTRY, "Question", "Score"]
+    )
+    .properties(
+        width=700,
+        height=400,
+        title="Cultural Differences in Feedback Preferences"
+    )
+)
+
+st.altair_chart(chart, use_container_width=True)
+
 
 else:
     st.error(
@@ -335,6 +357,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
