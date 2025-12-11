@@ -73,7 +73,7 @@ with st.sidebar:
 # ---------- TITLE / SMALL-TALK SECTION ----------
 st.title("Why did I build a website?")
 st.header("I took Python I, II and Data Analytics this semester")
-st.header("And I want to go around and take a look at other's projects, that why you received this link")
+st.header("And I want to go around to take a look at other's projects, not just sit there and wait for you guys,so that why you here!!!!")
 
 st.markdown("<a id='small-talk'></a>", unsafe_allow_html=True)
 st.header("For folks having situation with small talk/networking")
@@ -361,6 +361,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
