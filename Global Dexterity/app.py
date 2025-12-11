@@ -125,7 +125,7 @@ st.header("2. Cultural Expectations Survey")
 pie_chart_path = BASE_DIR / "chart" / "Backgroup.jpg"
 
 if pie_chart_path.exists():
-    st.subheader("Where did survey participants grow up?")
+    st.subheader("Survey participants background")
     st.image(pie_chart_path, use_container_width=True)
     st.write(
         """
@@ -357,6 +357,7 @@ if submitted:
     st.success("Thank you for your feedback! 🙏")
 
 st.success("And thank you so much for viewing my Global Dexterity project!")
+
 
 
 
